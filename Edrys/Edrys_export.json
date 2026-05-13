@@ -5,7 +5,7 @@
   "name": "YaMi Remote LAB",
   "meta": {
     "logo": "",
-    "description": "",
+    "description": "Remote Lab Projekt für das Modul Softwareentwichlung für Eingebettete Systeme. <br> Ziel ist es mithilfe eines Motors und Bilderkennung erfahrungen und Spaß zu sammeln.\n\n\n",
     "selfAssign": false,
     "defaultNumberOfRooms": "3"
   },
@@ -40,6 +40,35 @@
       "stationConfig": {
         "content": ""
       },
+      "showInCustom": "Raum 1",
+      "width": "full",
+      "height": "tall"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-avr8js/index.html",
+      "config": {
+        "execute": "run",
+        "modules": "<wokwi-led color='green'   pin='3' label='Pin 3'></wokwi-led>\n<wokwi-pushbutton color='green'   pin='2' label='Pin 2'></wokwi-pushbutton>\n<span id='simulation-time'></span>"
+      },
+      "studentConfig": "",
+      "teacherConfig": "",
+      "stationConfig": "",
+      "showInCustom": "Raum 1",
+      "width": "half",
+      "height": "medium"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-editor/index.html",
+      "config": {
+        "runCommand": "run",
+        "language": "cpp",
+        "theme": "vs-dark",
+        "editorText": "const int buttonPin = 2;\nbool buttonPressed = false;\n\nvoid setup() {\n  pinMode(buttonPin, INPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  int buttonState = digitalRead(buttonPin);\n\n  if (buttonState==HIGH && buttonPressed == false){\n      buttonPressed = true;\n      Serial.println(\"Button pressed\");\n  }\n  if (buttonState==LOW && buttonPressed == true){\n      buttonPressed = false;\n      Serial.println(\"Button released\");\n  }\n  delay(10);\n}\n",
+        "synchronize": false
+      },
+      "studentConfig": "",
+      "teacherConfig": "",
+      "stationConfig": "",
       "showInCustom": "Raum 1",
       "width": "full",
       "height": "tall"
