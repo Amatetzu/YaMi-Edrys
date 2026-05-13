@@ -1,0 +1,68 @@
+{
+  "id": "OlSBEE2DmjqwUGIA",
+  "createdBy": "2tn6lm5g1X9Us",
+  "dateCreated": 1778669944418,
+  "name": "YaMi Remote LAB",
+  "meta": {
+    "logo": "",
+    "description": "",
+    "selfAssign": false,
+    "defaultNumberOfRooms": "3"
+  },
+  "members": {
+    "teacher": [
+      "JqsFxhemtn67"
+    ],
+    "student": []
+  },
+  "modules": [
+    {
+      "url": "https://edrys-labs.github.io/module-markdown-it/index.html",
+      "config": "",
+      "studentConfig": "",
+      "teacherConfig": "",
+      "stationConfig": "",
+      "showInCustom": "Lobby",
+      "width": "full",
+      "height": "tall"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-markdown-it/index.html",
+      "config": {
+        "content": "Das ist die Aufgabe"
+      },
+      "studentConfig": {
+        "content": ""
+      },
+      "teacherConfig": {
+        "content": ""
+      },
+      "stationConfig": {
+        "content": ""
+      },
+      "showInCustom": "Raum 1",
+      "width": "full",
+      "height": "tall"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-markdown-it/index.html",
+      "config": "",
+      "studentConfig": "",
+      "teacherConfig": "",
+      "stationConfig": "",
+      "showInCustom": "Raum 2",
+      "width": "full",
+      "height": "tall"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-markdown-it/index.html",
+      "config": "",
+      "studentConfig": "",
+      "teacherConfig": "",
+      "stationConfig": "",
+      "showInCustom": "Raum 3",
+      "width": "full",
+      "height": "tall"
+    }
+  ]
+}
