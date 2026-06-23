@@ -1,14 +1,25 @@
+// Type code here...
+// Right click or Ctrl + S to upload your code.
+#include <Servo.h>
 #include <Arduino.h>
 
-const int ledPin = 13; // Pin number for the built-in LED
+Servo myservo;  // create servo object to control a servo
+// twelve servo objects can be created on most boards
+
+int pos = 0;    // variable to store the servo position
 
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(ledPin, OUTPUT);
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  digitalWrite(ledPin, HIGH); // Turn the LED on
-  delay(1000);                // Wait for 1 second
+  for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
+    // in steps of 1 degree
+    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
 }
