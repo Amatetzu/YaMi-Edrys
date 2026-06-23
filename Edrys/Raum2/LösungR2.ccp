@@ -1,9 +1,6 @@
 #define BUTTON_PIN 2 // Der Pin, an dem der Taster angeschlossen ist 
 #define LED_PIN 13   // Die eingebaute LED 
 
-// speichert den Status der LED: 0 = aus, 1 = ein
-
-int StatusGelb = 0;  
 
 void setup()  
 
