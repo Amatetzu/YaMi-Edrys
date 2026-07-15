@@ -1,4 +1,4 @@
-# Aufgabe 1: Building from Scratch
+# Station: Building from Scratch
 
 ## Information
 
