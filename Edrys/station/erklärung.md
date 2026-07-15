@@ -1,8 +1,25 @@
 # Station: Building from Scratch
 
 ## Information
+Auf dieser Station kannst du das Wissen aus den vorherigen Aufgaben anwenden. Dabei wurde bewusst kein Code vorgegeben. Die benötigten Dokumentationen sind weiter unten verlinkt.
 
-Die Aufgabe besteht darin, den Schrittmotor ohne einen Codevorschlag zwei vollständige Umdrehungen ausführen zu lassen. Nach jeder Umdrehung soll der LED-Ring aufleuchten.
+### Aufgaben
+
+**1. Aufgabe:**
+**Hello World – LED-Ring**
+Bringe den LED-Ring zum Leuchten.
+
+**2. Aufgabe:**
+**Hello World – Servo-Motor**
+Steuere den Servo-Motor an und lasse den Zeiger eine vollständige Umdrehung ausführen.
+
+**3. Aufgabe:**
+Sobald der Sensor aktiviert wird, soll der LED-Ring anfangen zu leuchten.
+
+### Zusatzaufgabe
+
+Erweitere das Programm um einen speziellen Lichteffekt. Bei jeder Aktivierung soll nicht der gesamte LED-Ring gleichzeitig leuchten. Stattdessen soll das Licht einmal im Kreis (Entgegengesetzt zum Zeiger) laufen.
+
 
 ## Aufbau
 
