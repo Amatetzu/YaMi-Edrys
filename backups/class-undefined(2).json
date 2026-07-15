@@ -1,0 +1,229 @@
+{
+  "name": "YaMi - Servo Learning",
+  "members": {
+    "teacher": [
+      "BGA9xq/S1/3gGKsTFuloEpfR6+9GMsikAWK64iNhWVbHWnukKWXvAQWypcCP2kP/pU/61b3OphErn4Ol+FKr6bU=",
+      "BN2BmYVreIi3WxX7OBuZTnAFGGvUmrd2OEuPFS75/CRaUNyorvKXbiuIvs/P4wlmX2g+8T2iGAqXuUZ0fXu+3HY="
+    ],
+    "student": []
+  },
+  "modules": [
+    {
+      "url": "https://edrys-labs.github.io/module-markdown-it/index.html",
+      "config": {
+        "content": "# Komplexaufgabe 3 - Interrupts\nLiebe Teilnehmerinnen und Teilnehmer, \n\nanalog zu den vorangegangen soll Ihnen auch diese Komplexaufgabe Gelegenheit geben sich zusätzlich zu den praktischen Übungen mit den Grundlagen der Programmierung eingebetteter Systeme vertraut zu machen.\n\nDie Aufgabe ist so konzipiert, dass Sie die Lösung selbstständig erarbeiten können.  Sollten Sie dennoch Fragen haben, können Sie sich gerne an die Betreuer wenden.\n\nFür die Aufgabe erläutert Raum 1 die Fragestellungen und Lernziele. Danach ist in Raum 2 eine Simulatorübung zur Fehlerbehebung vorgesehen. Die praktische Umsetzung auf dem Laborsetup erfolgt auf der \"Station\".\n\nNoch umfasst unsere Lösung keinen Multi-User-Modus - entsprechend könnten Sie einen Kommilitonen ziemlich ärgern,  wenn Sie ihm die Kontrolle entziehen. Prüfen Sie also bitte vorher, ob das Setup gerade von jemand anderem verwendet wird. Die „Station\" merkt sich immer den letzten Stand,  verlassen Sie Ihren Arbeitsplatz ordentlich und kopieren sie vor dem verlassen einfach den Original-Code in den Editor…\n\nEin kleines Video-Tutorial über die Verwendung von Edrys:\n\n<video\ncontrols\nsrc=\"https://github.com/edrys-labs/lab-tubaf-embedded-systems/raw/refs/heads/main/media/task3-motivation.webm\"\nwidth=\"100%\">\nSorry, your browser doesn't support embedded videos, but don't worry, you can\n<a href=\"https://github.com/edrys-labs/lab-tubaf-embedded-systems/raw/refs/heads/main/media/task3-motivation.webm\">download it</a>\nand watch it with your favorite video player!\n</video>\n> Ihre Codeänderungen werden auf der Station anonymisiert gespeichert. Wir wollen damit tatsächliche Problemfelder identifizieren, um damit die Veranstaltung systematisch weiterzuentwickeln. Aus den Daten können keine Rückschlüsse auf den Teilnehmenden oder spezifika des Rechners gezogen werden. Wenn Sie Fragen dazu haben, sprechen Sie uns gern an.\n\nWir freuen uns auf Ihr Feedback und Ihre Anregungen.\n\n_Ihr CrossLab Team_"
+      },
+      "studentConfig": {
+        "content": ""
+      },
+      "teacherConfig": {
+        "content": ""
+      },
+      "stationConfig": {
+        "content": ""
+      },
+      "showInCustom": "lobby",
+      "width": "full",
+      "height": "huge",
+      "id": "a8134cb0-46d2-4b3e-9123-09ba5e608e34"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-markdown-it/index.html",
+      "config": {
+        "content": "# Aufgabeninhalt\n\n## Lernziele\n\n* Konfiguration und Nutzung von Interrupts zur Erkennung und Reaktion auf externe Ereignisse\n* Steuerung eines Schrittmotors mit präziser Positionsbestimmung\n* Visualisierung der Motorposition auf einem LED-Ring\n* Nutzung globaler Variablen mit volatile zur Synchronisation zwischen Hauptprogramm und Interrupt-Service-Routine\n* Strukturierung des Programmcodes durch Auslagerung wiederverwendbarer Funktionen\n\n## Aufgabenstellung\nEntwickeln Sie einen Programmcode, der folgende Anforderungen erfüllt:\n* **Interrupt-Routine (ISR)**: implementieren Sie eine ISR, die bei einer fallenden Flanke des Sensors (Pin 2) die globale, \n  als volatile deklarierte Variable position auf 0 setzt, wenn ein Signal detektiert wird\n\n* **Ersatz des Polling-Ansatzes**: entfernen Sie das bisherige Polling im Hauptprogramm und ersetzen Sie es durch die ISR, \n  um den Sensorstatus effizient zu erfassen\n\n* **Visualisierung der Motorposition**: binden Sie den LED-Ring (24 LEDs) ein und skalieren Sie den Positionswert position auf den Wertebereich des LED-Rings, \n  um die aktuelle Motorposition anzuzeigen\n\n* **Ansteuerung des Schrittmotors**: steuern Sie einen Schrittmotor (2048 Schritte/Umdrehung) für 3 volle Umdrehungen an und synchronisieren Sie die LED-Visualisierung mit der Motorbewegung\n\n## Technische Basis\nDie Umsetzung erfolgt auf einem Arduino Uno mit den folgenden Komponenten:\n\n| Bautteil                | Bezeichnung                 | Elektrische Verbindung       |\n| ----------------------- | --------------------------- | ---------------------------- |\n| Schrittmotor            | 28BYJ-48                    | Pins 8, 9, 10, 11            |\n| Motortreiber            | ULN2003                     | Versorgung des Schrittmotors |\n| Magnetischer Sensor     | Hall-Sensor                 | Pin 2, 5V, GND               |\n| LED-Ring                | Adafruit NeoPixel (24 LEDs) | Pin 3, 5V, GND               |\n\n> Der Zeitaufwand für die Umsetzung der Aufgabe beträgt etwa 90 Minuten."
+      },
+      "studentConfig": {
+        "content": ""
+      },
+      "teacherConfig": {
+        "content": ""
+      },
+      "stationConfig": {
+        "content": ""
+      },
+      "showInCustom": "Room 1",
+      "width": "full",
+      "height": "tall",
+      "id": "4cf897cf-9eef-442c-8564-f40ba321817a"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-markdown-it/index.html",
+      "config": {
+        "content": "# Arduino Layout\n\n![ArduinoLayout](https://docs.arduino.cc/static/cb2219c4f549dd9a7fe040362b668567/a6d36/Pinout-UNOrev3_latest.png)"
+      },
+      "studentConfig": {
+        "content": ""
+      },
+      "teacherConfig": {
+        "content": ""
+      },
+      "stationConfig": {
+        "content": ""
+      },
+      "showInCustom": "Room 1",
+      "width": "half",
+      "height": "tall",
+      "id": "86ab8558-6400-4259-8b6d-5f46408151b0"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-markdown-it/index.html",
+      "config": {
+        "content": "# Simulatorübung: Bringe eine LED mittels Schalter zum Leuchten\n\nUm erste Erfahrungen mit der Arduino-Programmierung zu sammeln und den grundlegenden Aufbau eines Arduino-Programms kennenzulernen, habt ihr in dieser Übung die Möglichkeit, mit digitalen Ein- und Ausgängen zu arbeiten. Ziel ist es, einen Taster auszulesen und eine LED entsprechend zu steuern.\n\nIn dieser Übung verwenden wir einen Taster an Pin 2, um die LED an Pin 13 ein- und auszuschalten. Bei Drücken des Schalters soll die LED leuchten und beim Loslassen wieder ausgehen.\n\n## Aufgabe 1\n\nDer daneben stehende Code ist gegeben. Wenn der Schalter gedrückt wird, leuchtet die LED. Mach dich mit dem Code Vertraut und Kommentiere die einzelnen Funktionen des Codes.\n\n## Aufgabe 2\n\nBaue nun einen Delay ein, sodass die LED nach dem Drücken des Schalters noch 250 ms lang weiterleuchtet und anschließend ausgeht.\n"
+      },
+      "studentConfig": {
+        "content": ""
+      },
+      "teacherConfig": {
+        "content": ""
+      },
+      "stationConfig": {
+        "content": ""
+      },
+      "showInCustom": "Room 2",
+      "width": "half",
+      "height": "tall",
+      "id": "e98b099b-ab82-45bc-a40a-c396bcf072fc"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-editor/index.html",
+      "config": {
+        "editorId": "",
+        "editorText": "#define BUTTON_PIN 2  \n#define LED_PIN 13   \n\nint StatusGelb = 0;\n\nvoid setup()\n{\n  pinMode(LED_PIN, OUTPUT);\n\n\n  pinMode(BUTTON_PIN, INPUT);\n}\n\nvoid loop()\n{\n\n  StatusGelb = digitalRead(BUTTON_PIN);\n\n\n  if (StatusGelb == HIGH)\n  {\n    digitalWrite(LED_PIN, HIGH);\n  }\n  else\n  {\n    digitalWrite(LED_PIN, LOW);\n  }\n}",
+        "runCommand": "execute",
+        "language": "cpp",
+        "theme": "vs-dark",
+        "synchronize": false,
+        "readOnly": false,
+        "showLanguageSelector": false
+      },
+      "studentConfig": "",
+      "teacherConfig": "",
+      "stationConfig": "",
+      "showInCustom": "Room 2",
+      "width": "full",
+      "height": "huge",
+      "id": "f5cd5722-8d2f-413d-b559-ebda37a6b95f"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-avr8js/index.html",
+      "config": {
+        "modules": "<center>\n  <wokwi-led color='red' pin='13' label='Pin 13'></wokwi-led>\n\n  <wokwi-pushbutton color='green'   pin='2' label='Pin\n  2'></wokwi-pushbutton>\n  \n  <div id='simulation-time'></div>\n</center>\n",
+        "execute": "execute"
+      },
+      "studentConfig": "",
+      "teacherConfig": "",
+      "stationConfig": "",
+      "showInCustom": "Room 2",
+      "width": "half",
+      "height": "tall",
+      "id": "bc1e2107-56e7-4703-bdcc-2a50e76f499d"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-monaco-editor/",
+      "config": {
+        "editorId": "",
+        "value": "#include <Stepper.h>\n#include <Adafruit_NeoPixel.h>\n\n// Anzahl der Schritte pro Umdrehung\n#define STEPS      2048\n// Motorgeschwindigkeit in RPM\n#define MOTOR_RPM     6\nStepper stepper(STEPS, 8, 10, 9, 11); // Motor Pins\n\n#define PIN           3\n#define NUMPIXELS    24\nAdafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);\n\nint position = 0;\n\nvoid setup()\n{\n    pinMode(8, OUTPUT);\n    pinMode(9, OUTPUT);\n    pinMode(10, OUTPUT);\n    pinMode(11, OUTPUT);\n    pinMode(11, OUTPUT);\n    pinMode(2, INPUT_PULLUP);\n\n    Serial.begin(9600);\n    Serial.println(\"Motor startet\");\n\n    pixels.begin();\n    pixels.clear();\n\n    stepper.setSpeed(MOTOR_RPM);\n    int steps = 8;\n    int counter = 0;\n    // Generiere 3 Drehungen\n    // Überwache den Endlagensensor im Polling Mode und aktiviere den LED Ring\n    while (counter < 3 * STEPS) {\n        stepper.step(steps);\n        position=position+steps;\n        if (digitalRead(2) == 0) {\n          for (int i=0; i<NUMPIXELS; i++)\n            pixels.setPixelColor(i, pixels.Color(0, 150, 0));\n          pixels.show();\n        } else {\n          pixels.clear();\n          pixels.show();\n        }\n        counter += 3;\n        Serial.println(counter);\n    }\n    Serial.println(\"3 Runden absolviert\");\n}\n\nvoid loop()\n{\n}",
+        "runCommand": "execute",
+        "language": "cpp",
+        "theme": "vs-light",
+        "synchronize": true,
+        "readOnly": false,
+        "showLanguageSelector": true,
+        "editorText": "#include <Stepper.h>\n#include <Adafruit_NeoPixel.h>\n\n// Anzahl der Schritte pro Umdrehung\n#define STEPS      2048\n// Motorgeschwindigkeit in RPM\n#define MOTOR_RPM     6\nStepper stepper(STEPS, 8, 10, 9, 11); // Motor Pins\n\n#define PIN           3\n#define NUMPIXELS    24\nAdafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);\n\nint position = 0;\n\nvoid setup()\n{\n    pinMode(8, OUTPUT);\n    pinMode(9, OUTPUT);\n    pinMode(10, OUTPUT);\n    pinMode(11, OUTPUT);\n    pinMode(11, OUTPUT);\n    pinMode(2, INPUT_PULLUP);\n\n    Serial.begin(9600);\n    Serial.println(\"Motor startet\");\n\n    pixels.begin();\n    pixels.clear();\n\n    stepper.setSpeed(MOTOR_RPM);\n    int steps = 8;\n    int counter = 0;\n    // Generiere 3 Drehungen\n    // Überwache den Endlagensensor im Polling Mode und aktiviere den LED Ring\n    while (counter < 3 * STEPS) {\n        stepper.step(steps);\n        position=position+steps;\n        if (digitalRead(2) == 0) {\n          for (int i=0; i<NUMPIXELS; i++)\n            pixels.setPixelColor(i, pixels.Color(0, 150, 0));\n          pixels.show();\n        } else {\n          pixels.clear();\n          pixels.show();\n        }\n        counter += 3;\n        Serial.println(counter);\n    }\n    Serial.println(\"3 Runden absolviert\");\n}\n\nvoid loop()\n{\n}"
+      },
+      "showInCustom": "station",
+      "width": "full",
+      "height": "medium",
+      "id": "9086ca54-e4ef-43a1-813c-48c7a260e192"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-streaming/index.html",
+      "stationConfig": {
+        "streamName": "Stream 2",
+        "streamQuality": "medium",
+        "video": true,
+        "audio": false,
+        "mirrorX": false,
+        "mirrorY": false,
+        "rotate": 0,
+        "streamMethod": "webrtc",
+        "websocketUrl": ""
+      },
+      "showInCustom": "station",
+      "width": "half",
+      "height": "medium",
+      "id": "191b29ab-62d6-4281-a2a9-3f8551b65d8c"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-pyxtermjs/index.html",
+      "config": "",
+      "studentConfig": "",
+      "teacherConfig": "",
+      "stationConfig": {
+        "server": "http://localhost:5000/pty",
+        "execute": "execute",
+        "script": "echo $CODE | base64 --decode > Hello.ino\narduino-cli sketch new Hello\nolddir=$(pwd)\nmv Hello.ino Hello\ncd Hello\narduino-cli board attach -p /dev/ttyACM0 -b arduino:avr:uno\ncd $olddir\narduino-cli compile Hello && arduino-cli upload -p /dev/ttyACM0 Hello && arduino-cli monitor -p /dev/ttyACM0\n",
+        "enable": {
+          "teacher": true,
+          "student": true
+        }
+      },
+      "showInCustom": "station",
+      "width": "full",
+      "height": "tall",
+      "id": "b0344d0d-f857-45e8-b1dd-e797de9bd79b"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-markdown-it/index.html",
+      "config": {
+        "content": "# Station: Building from Scratch\n\n## Information\n\nDie Aufgabe besteht darin, den Schrittmotor ohne einen Codevorschlag zwei vollständige Umdrehungen ausführen zu lassen. Nach jeder Umdrehung soll der LED-Ring aufleuchten.\n\n## Aufbau\n\n- Schrittmotor\n- LED-Ring\n- Sensor\n- ULN2003\n\n## Verkabelung\n\nDer Motor hat die Bezeichnung **28BYJ-48** und wird über die Pins **8, 9, 10 und 11** angesteuert. Die Signale werden vom **ULN2003** verstärkt und anschließend an den Motor weitergegeben.\n\nUm den Motor zu steuern, empfiehlt sich die **[Stepper](https://docs.arduino.cc/libraries/stepper/)**-Bibliothek.\n\nEin gutes Beispiel hierfür ist dieses **[Beispiel](https://docs.arduino.cc/learn/electronics/stepper-motors/#stepperonerevolution)**.\n\nDer Sensor wird immer dann ausgelöst, wenn der Magnet am langen Ende des Zeigers ihn berührt. In diesem Fall sendet er eine **0** an **Pin 2**.\n\nDer LED-Ring ist ein **Adafruit NeoPixel** mit **24 LEDs** und wird über **Pin 3** gesteuert.\n\nZum Ansteuern des LED-Rings empfiehlt sich die **Adafruit_NeoPixel**-Bibliothek. Ein Beispiel für ihre Verwendung findet sich im **[GitHub](https://github.com/adafruit/Adafruit_NeoPixel)**-Repository der Bibliothek."
+      },
+      "studentConfig": {
+        "content": ""
+      },
+      "teacherConfig": {
+        "content": ""
+      },
+      "stationConfig": {
+        "content": ""
+      },
+      "showInCustom": "station",
+      "width": "half",
+      "height": "tall",
+      "id": "d70e5958-db60-4819-8c4d-cd1112f36b72"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-code-logger/",
+      "config": "",
+      "studentConfig": "",
+      "teacherConfig": "",
+      "stationConfig": "",
+      "showInCustom": "station, station-only",
+      "width": "full",
+      "height": "tall",
+      "id": "e121590b-3e1e-44b6-8322-507b4c40ebe1"
+    },
+    {
+      "url": "https://edrys-labs.github.io/module-station-light-control/index.html",
+      "config": "",
+      "studentConfig": "",
+      "teacherConfig": "",
+      "stationConfig": {
+        "lightIp": "192.168.8.140"
+      },
+      "showInCustom": "station, station-only",
+      "width": "third",
+      "height": "short",
+      "id": "65468979-9cff-4cc4-8b56-a073ddcd6ae1"
+    }
+  ],
+  "meta": {
+    "logo": "https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_EAVD/master/excercise/images/excercise_04.png",
+    "description": "Die Aufgabe 3 zielt darauf eine Motorsteuerung mit einer visuellen Ausgabe zu kombinieren und für die Synchronisation der beiden Komponenten einen Interrupt zu nutzen.",
+    "selfAssign": true,
+    "defaultNumberOfRooms": "2"
+  },
+  "createdBy": "BMc+QIQD5VAVHP2v/0DyhCE/LnGr/liNheFhay/HvQ3d29v0z59C9kD+AXZzWagCGFKSWrh1A4jprKj4qJlrU0M=",
+  "communicationConfig": null,
+  "keepUrlConfig": true
+}
