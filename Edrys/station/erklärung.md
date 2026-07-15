@@ -1,26 +1,26 @@
-# Aufgabe 1 building from scratsch
+# Aufgabe 1: Building from Scratch
 
+## Information
 
-### Information
-die aufgabe ist es ohne eine code vorschlag den servo moter eine bestimte Anzahl an grad drehen zu lassen (zum beispiel 350 grad)
+Die Aufgabe besteht darin, den Schrittmotor ohne einen Codevorschlag um eine bestimmte Anzahl an Grad drehen zu lassen (zum Beispiel 350°).
 
-aufbau: 
-- step Motor
-- LED Ring
+## Aufbau
+
+- Schrittmotor
+- LED-Ring
 - Sensor
 - ULN2003
 
-verkabelung:
+## Verkabelung
 
-der Moter hat die bezeichnung 28BYJ-48 und wird über Pins 8, 9, 10, 11 bestaltet, welche von einem ULM2003 verstärkt und an den Motor weiter gegeben werden.
+Der Motor hat die Bezeichnung **28BYJ-48** und wird über die Pins **8, 9, 10 und 11** angesteuert. Die Signale werden vom **ULN2003** verstärkt und anschließend an den Motor weitergegeben.
 
-um den Motor zu steuern empfiehlt sich dei (Stepper)[https://docs.arduino.cc/libraries/stepper/] libary
+Um den Motor zu steuern, empfiehlt sich die **[Stepper](https://docs.arduino.cc/libraries/stepper/)**-Bibliothek.
 
-ein gutes beispiel hierfür ist dieses (Beispiel)[https://docs.arduino.cc/learn/electronics/stepper-motors/#stepperonerevolution]
+Ein gutes Beispiel hierfür ist dieses **[Beispiel](https://docs.arduino.cc/learn/electronics/stepper-motors/#stepperonerevolution)**.
 
-Der Sensor wird immer dann ausgelöst, wenn der Magnet am langen Ende des Zeigers ihn berührt sendert er eine 0 an den Pin 2
+Der Sensor wird immer dann ausgelöst, wenn der Magnet am langen Ende des Zeigers ihn berührt. In diesem Fall sendet er eine **0** an **Pin 2**.
 
-der LED Ring ist ein Adafruit NeoPixel mit 24 LEDs und wird über den Pin 3 gesteuert
-Um den LED Ring zu steuern empfihelt sich die Adafruit_NeoPixel Libary. Ein Beispiel für die verwändung findet sich im [Github](https://github.com/adafruit/adafruit_neopixel) der Libary
+Der LED-Ring ist ein **Adafruit NeoPixel** mit **24 LEDs** und wird über **Pin 3** gesteuert.
 
-
+Zum Ansteuern des LED-Rings empfiehlt sich die **Adafruit_NeoPixel**-Bibliothek. Ein Beispiel für ihre Verwendung findet sich im **[GitHub](https://github.com/adafruit/Adafruit_NeoPixel)**-Repository der Bibliothek.
