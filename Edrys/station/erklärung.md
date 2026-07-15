@@ -2,7 +2,7 @@
 
 ## Information
 
-Die Aufgabe besteht darin, den Schrittmotor ohne einen Codevorschlag um eine bestimmte Anzahl an Grad drehen zu lassen (zum Beispiel 350°).
+Die Aufgabe besteht darin, den Schrittmotor ohne einen Codevorschlag zwei vollständige Umdrehungen ausführen zu lassen. Nach jeder Umdrehung soll der LED-Ring aufleuchten.
 
 ## Aufbau
 
