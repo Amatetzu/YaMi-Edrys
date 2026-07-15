@@ -6,7 +6,7 @@
 * keine Programmiererfahrung 
 
 ### Zeitplan 
-* Lösen der Aufgaben in 2 - 3 90 min Blöcke 
+* Lösen der Aufgaben in 90 min Blöcke 
 
 ### Lernziele 
 * "Hello World" Programm mit einem Servomotor realisieren 
