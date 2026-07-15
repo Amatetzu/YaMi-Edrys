@@ -1,12 +1,10 @@
 # Motoren und Sensoren
 
-In dem Projekt sollen Interessierte die Möglichkeit haben, durch 3 Schwierigkeitsstufen, den Umgang mit einem Servomotor und Bilderkennung zu erlangen.
+In dem Projekt sollen Interessierte die Möglichkeit haben, durch 2 Schwierigkeitsstufen, den Umgang mit c++ und der Documentation der jeweiligen libarys zu lernen
 
-### Raum 1 - Umgang mit dem Servomotor 
+### Raum 1 - Allgemeine Erklärungen 
 
-Dieser Raum bringt den Grundlegenden Umgang mit einem Servomotor bei und ist für all jene die kaum bis keine Erfahrung mit Programmierung mitbringen. 
-
-Die Aufgabe besteht darin den Motor anzusteuern und einen Sekundenzeiger nachzubauen.
+Dieser Raum Bietet eine Grundlegenede übersciht über den simulierten und echten Ardoinio, so wie verbaute elemenete später für die Station
 
 ### Raum 2 - LEDs und Motor
 
@@ -14,7 +12,7 @@ Dieser Raum soll alle ansprechen, die Fortgeschrittener in ihrer Programiererfah
 
 Aufgabe ist es über einen LED Ring und einen Servo Motor eine Uhr nachzubauen.
 
-### Raum 3 - Bilderkennung und Servomotor
+### Station - Servo Und LEDs
 
 Dieser Raum ist für Fortgeschrittene geeignet und für alle, die die ersten beiden Räume bewältigt haben.
 
