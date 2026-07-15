@@ -1,7 +1,14 @@
-# Aufgabe 2 - Lichtanzeiger
+# Aufgabe 2 - Uhr
 
-Aufgabe ist es, durch die Kamera Spontan aufleuchtende LEDs zu erkennen und auf diese dann mit Hilfe des Servomotrs zu zeigen.
+In Raum 1 sind die wichtigsten Technischen Details zu der Verbauen Technik hinterlegt. 
 
+## Aufgabe 1 
+
+Realisiere mittels Ansteuerung des Servo Motors einen Sekundenzeiger.
+
+## Aufgabe 2 
+
+FÜger der in Aufgabe 1 erstellten Sekundenuhr, mit Hilfe des LED Rings einen Minutenzeiger hinzu.
 
 # Lernziele
 
