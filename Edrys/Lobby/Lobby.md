@@ -1,19 +1,19 @@
 # Motoren und Sensoren
 
-In dem Projekt sollen Interessierte die Möglichkeit haben, durch 2 Schwierigkeitsstufen, den Umgang mit c++ und der Documentation der jeweiligen libarys zu lernen
+In diesem Projekt sollen Interessierte die Möglichkeit haben, in zwei Schwierigkeitsstufen den Umgang mit C++ sowie der Dokumentation der jeweiligen Bibliotheken (Libraries) zu erlernen.
 
-### Raum 1 - Allgemeine Erklärungen 
+### Raum 1 – Allgemeine Erklärungen
 
-Dieser Raum Bietet eine Grundlegenede übersciht über den simulierten und echten Ardoinio, so wie verbaute elemenete später für die Station
+Dieser Raum bietet einen grundlegenden Überblick über den simulierten und den echten Arduino sowie über die später in der Station verbauten Elemente.
 
-### Raum 2 - LEDs und Motor
+### Raum 2 – Hello World Simulation
 
-Dieser Raum soll alle ansprechen, die Fortgeschrittener in ihrer Programiererfahrung sind.
+Dieser Raum richtet sich an alle, die noch nicht viel Erfahrung mit Arduino und/oder C++ haben. Grundkenntnisse in anderen Programmiersprachen können hilfreich sein, um sich vom Code nicht einschüchtern zu lassen.
 
-Aufgabe ist es über einen LED Ring und einen Servo Motor eine Uhr nachzubauen.
+Ziel dieses Raumes ist es, in einem Simulator eine Lampe per Knopfdruck zum Leuchten zu bringen.
 
-### Station - Servo Und LEDs
+### Station – Servomotor und LEDs
 
-Dieser Raum ist für Fortgeschrittene geeignet und für alle, die die ersten beiden Räume bewältigt haben.
+Diese Station richtet sich an Fortgeschrittene sowie an alle, die Raum 2 bereits absolviert haben oder anderweitig Programmiererfahrung mitbringen.
 
-Aufgabe ist es, durch die Kamera Spontan aufleuchtende LEDs zu erkennen und auf diese dann mit Hilfe des Servomotrs zu zeigen.
+Hier soll ein kleines Codeprojekt ohne bereits vorhandenen Quellcode umgesetzt werden. Die Dokumentation der verwendeten Bibliotheken dient dabei als Hilfestellung.
